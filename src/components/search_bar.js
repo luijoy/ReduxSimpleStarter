@@ -4,7 +4,7 @@ class SearchBar extends Component {   // only class based components can have st
   constructor(props) {                // this is like an initializer method in ruby
     super(props)
 
-    this.state = { term: 'Get set' }         // only use this.state = x inside constructor function
+    this.state = { term: '' }         // only use this.state = x inside constructor function
   }
   render() {
     return (
