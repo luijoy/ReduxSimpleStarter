@@ -8,12 +8,17 @@ class SearchBar extends Component {   // only class based components can have st
   }
   render() {
     return (
-      <div>
+      <div className="search-bar">
         <input
           value={this.state.term}
-          onChange={event => this.setState({ term: event.target.value })} />
+          onChange={event => this.onInputChange(event.target.value)} />
       </div>
     ) // always manipulate state with 'this.setState'
+  }
+
+  onInputChange(term) {
+    this.setState({ term })
+    this.props.onSearchTermChange(term)
   }
 }
 
